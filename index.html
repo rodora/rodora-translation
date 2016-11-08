@@ -7,7 +7,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <title>RoDora Translation</title>
-
     <!-- Bootstrap -->
     <link href="css/libs/bootstrap.min.css" rel="stylesheet">
     <link href="css/libs/bootstrap-select.min.css" rel="stylesheet">
@@ -16,7 +15,6 @@
     <link href="css/libs/nouislider.pips.css" rel="stylesheet">
     <link href="css/libs/nouislider.tooltips.css" rel="stylesheet">
     <link href="css/main.css" rel="stylesheet">
-
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -54,9 +52,98 @@
             <!-- /.navbar-collapse -->
         </div>
     </nav>
-
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3">
+                <button type="button" class="btn btn-default">Prev</button>
+            </div>
+            <div class="form-group col-md-2">
+                <div class="input-group">
+                    <div class="input-group-addon">ID</div>
+                    <input type="text" class="form-control" id="txtID" disabled="disabled">
+                </div>
+            </div>
+            <div class="form-group col-md-2 col-md-offset-2">
+                <div class="input-group">
+                    <div class="input-group-addon">GID</div>
+                    <input type="text" class="form-control" id="txtGID" disabled="disabled">
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="pull-right">
+                    <button type="button" class="btn btn-default">Next</button>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6 col-md-offset-3">
+                <div class="form-group">
+                    <label for="txtName">Name</label>
+                    <div class="input-group">
+                        <div class="input-group-addon" id="txtNameJP">NameJP</div>
+                        <input type="text" class="form-control" id="txtName" />
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6 col-md-offset-3">
+                <div class="form-group">
+                    <label for="txtStory">Story</label>
+                    <ul class="list-group">
+                        <li class="list-group-item">
+                            <div id="txtStoryJP" style="text-align:center">test testtest
+                            </div>
+                        </li>
+                        <textarea class="list-group-item form-control" style="border-top-left-radius: 0;border-top-right-radius: 0;text-align:center"
+                            id="txtStory"></textarea>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label for="txtCutin">Cutin</label>
+                    <ul class="list-group">
+                        <li class="list-group-item">
+                            <div id="txtCutinJP" style="text-align:center">test testtest
+                            </div>
+                        </li>
+                        <textarea class="list-group-item form-control" style="border-top-left-radius: 0;border-top-right-radius: 0;text-align:center"
+                            id="txtCutin" rows="5"></textarea>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label for="txtAccessory">Accessory</label>
+                    <ul class="list-group">
+                        <div class="input-group">
+                            <div class="input-group-addon" id="txtAccessoryNameJP">AccessoryNameJP</div>
+                            <input type="text" class="form-control" id="txtAccessoryName" />
+                        </div>
+                        <li class="list-group-item">
+                            <div id="txtAccessoryJP" style="text-align:center">test testtest
+                            </div>
+                        </li>
+                        <textarea class="list-group-item form-control" style="border-top-left-radius: 0;border-top-right-radius: 0;text-align:center"
+                            id="txtAccessory" rows="5"></textarea>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="pull-left">
+                <button type="button" class="btn btn-danger">Clear</button>
+                <button type="button" class="btn btn-warning">Random</button>
+            </div>
+            <div class="pull-right">
+                <button type="button" class="btn btn-primary">Submit</button>
+            </div>
+        </div>
+    </div>
     <script src="js/libs/nprogress.js"></script>
-    
     <script>
         (function (i, s, o, g, r, a, m) {
             i['GoogleAnalyticsObject'] = r;
