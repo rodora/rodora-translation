@@ -53,7 +53,7 @@ $(function () {
     }
 
     function getApi(operate) {
-        return 'http://nodejs-rodora.rhcloud.com/' + operate;
+        return 'https://nodejs-rodora.rhcloud.com/' + operate;
     }
 
     function getIcon(gId) {
