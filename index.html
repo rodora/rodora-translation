@@ -54,97 +54,106 @@
     </nav>
     <div class="container">
         <div class="row">
-            <div class="col-md-3">
+            <div class="col-md-2">
                 <button type="button" class="btn btn-default">Prev</button>
             </div>
-            <div class="form-group col-md-2">
-                <div class="input-group">
-                    <div class="input-group-addon">ID</div>
-                    <input type="text" class="form-control" id="txtID" disabled="disabled">
+            <div class='col-md-2'>
+                <img class='icon' id='icon' />
+            </div>
+            <div class="col-md-6">
+                <div class="row">
+                    <div class="form-group col-md-4">
+                        <div class="input-group">
+                            <div class="input-group-addon">GID</div>
+                            <input type="text" class="form-control" id="txtGID" disabled="disabled">
+                        </div>
+                    </div>
+                    <div class="form-group col-md-4 col-md-offset-4">
+                        <div class="input-group">
+                            <div class="input-group-addon">ID</div>
+                            <input type="text" class="form-control" id="txtID" disabled="disabled">
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <label for="txtName">Name</label>
+                            <div class="input-group">
+                                <div class="input-group-addon" id="divNameJP">NameJP</div>
+                                <input type="text" class="form-control" id="txtName" />
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div class="form-group col-md-2 col-md-offset-2">
-                <div class="input-group">
-                    <div class="input-group-addon">GID</div>
-                    <input type="text" class="form-control" id="txtGID" disabled="disabled">
-                </div>
-            </div>
-            <div class="col-md-3">
+            <div class="col-md-2">
                 <div class="pull-right">
                     <button type="button" class="btn btn-default">Next</button>
                 </div>
             </div>
         </div>
         <div class="row">
-            <div class="col-md-6 col-md-offset-3">
-                <div class="form-group">
-                    <label for="txtName">Name</label>
-                    <div class="input-group">
-                        <div class="input-group-addon" id="txtNameJP">NameJP</div>
-                        <input type="text" class="form-control" id="txtName" />
+            <div class="col-md-8 col-md-offset-2">
+                <ul class="nav nav-tabs">
+                    <li role="presentation" class="active"><a href="#tabStory" data-toggle="tab">Story</a></li>
+                    <li role="presentation"><a href="#tabCutin" data-toggle="tab">Cutin</a></li>
+                    <li role="presentation" id='tabHeaderAccessory'><a href="#tabAccessory" data-toggle="tab">Accessory</a></li>
+                </ul>
+                <div class="tab-content">
+                    <div role="tabpanel" class="tab-pane active" id="tabStory">
+                        <div class="row">
+                            <div class="col-xs-6">
+                                <div id="divStoryJP" style="text-align:center;    padding: 10px 0;">test testtest
+                                </div>
+                            </div>
+                            <div class="col-xs-6">
+                                <textarea class="form-control textarea" id="txtStory"></textarea>
+                            </div>
+                        </div>
+                    </div>
+                    <div role="tabpanel" class="tab-pane" id="tabCutin">
+                        <div class="row">
+                            <div class="col-xs-6">
+                                <ul id="divCutinJP" style="padding: 5px 30px;"></ul>
+                            </div>
+                            <div class="col-xs-6">
+                                <textarea class="form-control textarea" rows="5" id="txtCutin"></textarea>
+                            </div>
+                        </div>
+                    </div>
+                    <div role="tabpanel" class="tab-pane" id="tabAccessory">
+                        <div class="row" style="padding-top:10px;">
+                            <div class="input-group">
+                                <div class="input-group-addon" id="divAccessoryNameJP">AccessoryNameJP</div>
+                                <input type="text" class="form-control" id="txtAccessoryName" />
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-6">
+                                <div id="divAccessoryDetailJP" style="text-align:center;padding: 10px 0;">test testtest
+                                </div>
+                            </div>
+                            <div class="col-xs-6">
+                                <textarea class="form-control textarea" rows="3" id="txtAccessoryDetail"></textarea>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
         <div class="row">
-            <div class="col-md-6 col-md-offset-3">
-                <div class="form-group">
-                    <label for="txtStory">Story</label>
-                    <ul class="list-group">
-                        <li class="list-group-item">
-                            <div id="txtStoryJP" style="text-align:center">test testtest
-                            </div>
-                        </li>
-                        <textarea class="list-group-item form-control" style="border-top-left-radius: 0;border-top-right-radius: 0;text-align:center"
-                            id="txtStory"></textarea>
-                    </ul>
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-6">
-                <div class="form-group">
-                    <label for="txtCutin">Cutin</label>
-                    <ul class="list-group">
-                        <li class="list-group-item">
-                            <div id="txtCutinJP" style="text-align:center">test testtest
-                            </div>
-                        </li>
-                        <textarea class="list-group-item form-control" style="border-top-left-radius: 0;border-top-right-radius: 0;text-align:center"
-                            id="txtCutin" rows="5"></textarea>
-                    </ul>
-                </div>
-            </div>
-            <div class="col-md-6">
-                <div class="form-group">
-                    <label for="txtAccessory">Accessory</label>
-                    <ul class="list-group">
-                        <div class="input-group">
-                            <div class="input-group-addon" id="txtAccessoryNameJP">AccessoryNameJP</div>
-                            <input type="text" class="form-control" id="txtAccessoryName" />
-                        </div>
-                        <li class="list-group-item">
-                            <div id="txtAccessoryJP" style="text-align:center">test testtest
-                            </div>
-                        </li>
-                        <textarea class="list-group-item form-control" style="border-top-left-radius: 0;border-top-right-radius: 0;text-align:center"
-                            id="txtAccessory" rows="5"></textarea>
-                    </ul>
-                </div>
-            </div>
-        </div>
-        <div class="row">
             <div class="pull-left">
-                <button type="button" class="btn btn-danger">Clear</button>
-                <button type="button" class="btn btn-warning">Random</button>
+                <a class="btn btn-warning" href="#random">Random</a>
             </div>
             <div class="pull-right">
-                <button type="button" class="btn btn-primary">Submit</button>
+                <button type="button" class="btn btn-primary" id='btnSubmit'>Submit</button>
             </div>
         </div>
     </div>
     <script src="js/libs/nprogress.js"></script>
     <script src="js/libs/jquery-1.12.3.min.js"></script>
+    <script src="js/libs/bootstrap.min.js"></script>
     <script src="js/libs/underscore-min.js"></script>
     <script src="js/libs/backbone-min.js"></script>
     <script src="js/main.js"></script>
