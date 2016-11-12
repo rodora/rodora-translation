@@ -15,12 +15,13 @@ $(function () {
         $('#icon').attr("src", getIcon(unit.gId));
 
         $('#divNameJP').text(unit.name);
+        $('#txtName').val(unit.name);
 
         $('#divStoryJP').html(formatStory(unit.story));
         $('#txtStory').val(unit.story);
-        $('#txtStory').height($('#divStoryJP').parent().height());
 
         $('#divCutinJP').empty();
+        $('#txtCutin').val("");
         $.each(unit.cutin, function (i, o) {
             $('#divCutinJP').append($("<li>").text(o));
         });
@@ -28,6 +29,7 @@ $(function () {
         if (unit.accessory) {
             $('#tabHeaderAccessory').show();
             $('#divAccessoryNameJP').text(unit.accessory.name);
+            $('#txtAccessoryName').val(unit.accessory.name);
             $('#divAccessoryDetailJP').html(formatStory(unit.accessory.detail));
             $('#txtAccessoryDetail').val(unit.accessory.detail);
         } else {
@@ -101,7 +103,6 @@ $(function () {
     function initControl() {
         $('#txtStory').change(function (event) {
             $('#divStoryJP').html(formatStory($('#txtStory').val()));
-            $('#txtStory').height($('#divStoryJP').parent().height());
         });
 
         $('#btnSubmit').click(function () {
